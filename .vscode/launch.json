@@ -14,7 +14,8 @@
             "type": "node",
             "name": "Run Current File",
             "request": "launch",
-            "program": "${workspaceFolder}/js/rep-obj.js",
+            "program": "${workspaceFolder}/js/auto.js",
+            // "runtimeExecutable": "/fantom-ass/.nvm/versions/node/v18.17.0/bin/node",
             "console": "integratedTerminal",
             "internalConsoleOptions": "openOnSessionStart"
         }

@@ -10,26 +10,25 @@ function checkAge(age) {
 }
 
 console.log(checkAge(16));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 2
 
 function checkPassword(password) {
     const ADMIN_PASSWORD = 'jqueryismyjam';
-    // Change code below this line
 
     if (password === ADMIN_PASSWORD) {
         return 'Welcome!';
     }
     return 'Access denied, wrong password!';
-    // Change code above this line
 }
 
 console.log(checkPassword('jqueryismyjam'));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 3
 
 function checkStorage(available, ordered) {
-    // Change code below this line
     if (ordered === 0) {
         return 'Your order is empty!';
     }
@@ -37,10 +36,10 @@ function checkStorage(available, ordered) {
         return 'Your order is too large, not enough goods in stock!';
     }
     return 'The order is accepted, our manager will contact you';
-    // Change code above this line
 }
 
 console.log(checkStorage(10, 11));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 4
 
@@ -51,24 +50,27 @@ const lastElementIndex = fruits.length - 1;
 const lastElement = fruits[lastElementIndex];
 
 console.log(lastElement);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 5
 
 function getExtremeElements(array) {
-    // Change code below this line
     array.splice(1, array.length - 2);
     return console.log(array);
-    // Change code above this line
 }
 
 getExtremeElements([1, 2, 3, 4, 5, 6]);
 
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
 // METHODS
+console.log('================= METHODS ====================');
 
 const nameArr1 = 'Array is big';
 const nameArr2 = ['Array', 'is', 'big'];
 
 // split()
+console.log('----------------- split() -------------------');
 
 console.log(nameArr1.split(''));
 console.log(nameArr1.split(' '));
@@ -76,16 +78,19 @@ console.log(nameArr1.split('', 8));
 console.log(nameArr1.split(' ', 2));
 
 // join()
+console.log('----------------- join() -------------------');
 
 console.log(nameArr2.join(''));
 console.log(nameArr2.join(' '));
 console.log(nameArr2.join('-'));
 
 // indexOf()
+console.log('---------------- indexOf() -----------------');
 
 console.log(nameArr2.indexOf('big'));
 
 // includes()
+console.log('--------------- includes() -----------------');
 
 console.log(nameArr2.includes('Array'));
 console.log(nameArr2.includes('Arr'));
@@ -100,6 +105,7 @@ if (hasFruit) {
 }
 
 // push() and pop()
+console.log('------------ push() and pop() --------------');
 
 nameArr2.push('but', 'not', 'so', 'much');
 console.log(nameArr2);
@@ -108,6 +114,7 @@ nameArr2.pop();
 console.log(nameArr2);
 
 // slice()
+console.log('---------------- slice() -------------------');
 
 // повертає частину масиву від і до, але не включно
 console.log(redFruits.slice(1, 3));
@@ -117,6 +124,7 @@ console.log(redFruits.slice(1));
 console.log(redFruits.slice(-2));
 
 // splice()
+console.log('---------------- splice() ------------------');
 
 // remove elements
 const scores1 = [1, 2, 3, 4, 5, 6, 7];
@@ -141,6 +149,7 @@ scores3.splice(1, 3, 2, 3, 4);
 console.log(scores3);
 
 // concat()
+console.log('---------------- concat() ------------------');
 
 const concat1 = [1, 2, 3, 4, 5];
 const concat2 = [6, 7, 8, 9, 10];
@@ -148,63 +157,56 @@ const concat2 = [6, 7, 8, 9, 10];
 const concat = concat1.concat(concat2);
 
 console.log(concat);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 6
 
 function calculateEngravingPrice(message, pricePerWord) {
-    // Change code below this line
-
     return message.split(' ').length * pricePerWord;
-
-    // Change code above this line
 }
 
 console.log(calculateEngravingPrice('JavaScript is in my blood', 10));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 7
 
 function makeStringFromArray(array, delimiter) {
     let string;
-    // Change code below this line
 
     string = array.join(delimiter);
 
-    // Change code above this line
     return string;
 }
+
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 8
 
 function slugify(title) {
-    // Change code below this line
-
-    slug = title.toLowerCase().split(' ');
+    const slug = title.toLowerCase().split(' ');
     return slug.join('-');
-
-    // Change code above this line
 }
 
 console.log(slugify('Arrays for beginners'));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 //example 9
 
 function makeArray(firstArray, secondArray, maxLength) {
-    // Change code below this line
     const newArray = firstArray.concat(secondArray);
     if (newArray.length > maxLength) {
         return newArray.slice(0, maxLength);
     }
     return newArray;
-    // Change code above this line
 }
 
 console.log(makeArray([1, 2, 3], [4, 5, 6, 7], 5));
 console.log(makeArray([1, 2, 3], [4, 5, 6, 7], 9));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 10
 
 function calculateTotal(number) {
-    // Change code below this line
     let total = 0;
 
     for (let i = 0; i <= number; i += 1) {
@@ -212,29 +214,29 @@ function calculateTotal(number) {
     }
 
     return total;
-    // Change code above this line
 }
 
 console.log(calculateTotal(10));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 11
 
 function calculateTotalPrice(order) {
     let total = 0;
-    // Change code below this line
+
     for (const items of order) {
         total += items;
     }
-    // Change code above this line
+
     return total;
 }
 
 console.log(calculateTotalPrice([45, 34, 12, 8, 57]));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 12 : Напиши функцію findLongestWord(string), яка приймає довільний рядок, що складається тільки зі слів, розділених пробілом (параметр string), і повертає найдовше слово в цьому рядку
 
 function findLongestWord(string) {
-    // Change code below this line
     const array = string.split(' ');
 
     let longestWord = array[0];
@@ -245,30 +247,29 @@ function findLongestWord(string) {
         }
     }
     return longestWord;
-
-    // Change code above this line
 }
 
 console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 11 : Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max
+// example 13 : Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max
 
 function createArrayOfNumbers(min, max) {
     const numbers = [];
-    // Change code below this line
-    for (i = min; i <= max; i += 1) {
+
+    for (let i = min; i <= max; i += 1) {
         numbers.push(i);
     }
-    // Change code above this line
+
     return numbers;
 }
 
 console.log(createArrayOfNumbers(4, 16));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 12 : Напиши функцію filterArray(numbers, value), яка приймає масив чисел (параметр numbers) і повертає новий масив, в якому будуть тільки ті елементи масиву numbers, які більші за значення параметра value (число).
+// example 14 : Напиши функцію filterArray(numbers, value), яка приймає масив чисел (параметр numbers) і повертає новий масив, в якому будуть тільки ті елементи масиву numbers, які більші за значення параметра value (число).
 
-function filterArray(numbers, value) {
-    // Change code below this line
+function filteredArray(numbers, value) {
     let newArray = [];
 
     for (const item of numbers) {
@@ -278,12 +279,12 @@ function filterArray(numbers, value) {
     }
 
     return newArray;
-    // Change code above this line
 }
 
-console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filteredArray([12, 24, 8, 41, 76], 38));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 13
+// example 15
 
 function checkFruit(fruit) {
     const fruits = ['apple', 'plum', 'pear', 'orange'];
@@ -295,11 +296,11 @@ function checkFruit(fruit) {
 
 console.log(checkFruit('pear'));
 console.log(checkFruit('banana'));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 14
+// example 16
 
 function getCommonElements(array1, array2) {
-    // Change code below this line
     let newArray = [];
     for (const item of array1) {
         if (array2.includes(item)) {
@@ -307,16 +308,15 @@ function getCommonElements(array1, array2) {
         }
     }
     return newArray;
-    // Change code above this line
 }
 
 console.log(getCommonElements([2, 45, 23, 54, 7], [45, 24, 15, 7, 51, 2]));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 15
+// example 17
 
-function calculateTotalPrice(order) {
+function calculatePrice(order) {
     let total = 0;
-    // Change code below this line
 
     // for (let i = 0; i < order.length; i += 1) {
     //     total += order[i];
@@ -326,16 +326,15 @@ function calculateTotalPrice(order) {
         total += item;
     }
 
-    // Change code above this line
     return total;
 }
 
-console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+console.log(calculatePrice([412, 371, 94, 63, 176]));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 16
+// example 18
 
 function filterArray(numbers, value) {
-    // Change code below this line
     const filteredNumbers = [];
 
     // for (let i = 0; i < numbers.length; i += 1) {
@@ -353,15 +352,14 @@ function filterArray(numbers, value) {
     }
 
     return filteredNumbers;
-    // Change code above this line
 }
 
 console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 17
+// example 19
 
 function getEvenNumbers(start, end) {
-    // Change code below this line
     let newArray = [];
 
     for (let i = start; i <= end; i += 1) {
@@ -371,12 +369,12 @@ function getEvenNumbers(start, end) {
     }
 
     return newArray;
-    // Change code above this line
 }
 
 console.log(getEvenNumbers(6, 12));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 18 : Доповни код таким чином, щоб у змінну number записувалося перше число від start до end, яке ділиться на 5 без остачі
+// example 20 : Доповни код таким чином, щоб у змінну number записувалося перше число від start до end, яке ділиться на 5 без остачі
 
 const start = 6;
 const end = 27;
@@ -390,11 +388,11 @@ for (let i = start; i < end; i += 1) {
 }
 
 console.log(number);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
-// example 19
+// example 21
 
 function findNumber(start, end, divisor) {
-    // Change code below this line
     let number;
 
     for (let i = start; i < end; i += 1) {
@@ -402,21 +400,21 @@ function findNumber(start, end, divisor) {
             return i;
         }
     }
-    // Change code above this line
 }
 
-// example 20 : Напиши функцію includes(array, value), яка робить те саме, що і метод масиву масив.includes(значення) - перевіряє, чи присутнє в масиві array значення value, повертаючи true, якщо присутнє, і false в іншому випадку
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 22 : Напиши функцію includes(array, value), яка робить те саме, що і метод масиву масив.includes(значення) - перевіряє, чи присутнє в масиві array значення value, повертаючи true, якщо присутнє, і false в іншому випадку
 
 function includes(array, value) {
-    // Change code below this line
     for (const item of array) {
         if (item === value) {
             return true;
         }
     }
     return false;
-    // Change code above this line
 }
 
 console.log(includes([1, 2, 3, 4, 5], 17));
 console.log(includes([1, 2, 3, 4, 5], 3));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
