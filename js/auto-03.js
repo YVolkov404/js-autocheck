@@ -368,44 +368,37 @@ console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 18
 
-// function makeTask({ category: 'Finance', newText: 'Take interest' }) {
-//     const completed = false;
-//     const category = 'General';
-//     const priority = 'Normal';
+function makeTask(data) {
+    const completed = false;
+    const category = 'General';
+    const priority = 'Normal';
 
-//     data = {
-//         completed: false,
-//         category: 'General',
-//         priority: 'Normal',
-//         text,
-//     };
+    const {
+        category: newCategory = 'General',
+        priority: newPriority = 'Normal',
+        text: newText,
+    } = data;
 
-//     const {
-//         completed: newCompleted,
-//         category: newCategory,
-//         priority: newPriority,
-//         text: newText,
-//     } = data;
+    data = {
+        category,
+        priority,
+        text: newText,
+        completed,
+        newProps(changeCategory, changePriority) {
+            this.category = changeCategory;
+            this.priority = changePriority;
+        },
+        addText(addText) {
+            this.newText = addText;
+        },
+    };
 
-//     return data;
-// }
+    data.newProps(newCategory, newPriority);
+    data.addText(newText);
 
-// console.log(data);
+    return data;
+}
+
+console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
 
 console.log('++++++++++++++++++++++++++++++++++++++++++++++');
-
-const book = {
-    title: 'The Last Kingdom',
-    author: 'Bernard Cornwell',
-};
-
-// Додамо зображення обкладинки, якщо воно відсутнє в об'єкті книги
-const {
-    title = 'ggg',
-    coverImage = 'https://via.placeholder.com/640/480',
-    author,
-} = book;
-
-console.log(title); // The Last Kingdom
-console.log(author); // Bernard Cornwell
-console.log(coverImage); // https://via.placeholder.com/640/480
