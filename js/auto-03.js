@@ -203,11 +203,11 @@ console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 11
 
-const highTemperatures = {
-    yesterday: 28,
-    today: 26,
-    tomorrow: 33,
-};
+// const highTemperatures = {
+//     yesterday: 28,
+//     today: 26,
+//     tomorrow: 33,
+// };
 
 //const { yesterday, today, tomorrow } = highTemperatures;
 
@@ -218,24 +218,194 @@ console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 12
 
-const {
-    yesterday,
-    today,
-    tomorrow,
-    icon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
-} = highTemperatures;
+// const {
+//     yesterday,
+//     today,
+//     tomorrow,
+//     icon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
 
-//const meanTemperature = (yesterday + today + tomorrow) / 3;
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
 
-console.log(meanTemperature);
+// console.log(meanTemperature);
 console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 13
 
-const highYesterday = highTemperatures.yesterday;
-const highToday = highTemperatures.today;
-const highTomorrow = highTemperatures.tomorrow;
-const highIcon = highTemperatures.icon;
+// const {
+//     yesterday: highYesterday,
+//     today: highToday,
+//     tomorrow: highTomorrow,
+//     icon: highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
 
-// Change code above this line
-const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+//const temperature = (highYesterday + highToday + highTomorrow) / 3;
+
+//console.log(temperature);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 14
+
+const someColors = [
+    { hex: '#f44336', rgb: '244,67,54' },
+    { hex: '#2196f3', rgb: '33,150,243' },
+    { hex: '#4caf50', rgb: '76,175,80' },
+    { hex: '#ffeb3b', rgb: '255,235,59' },
+];
+
+const hexSomeColors = [];
+const rgbSomeColors = [];
+
+//const { hex, rgb } = someColors;
+
+for (const { hex, rgb } of someColors) {
+    hexSomeColors.push({ hex, rgb }.hex);
+    rgbSomeColors.push({ hex, rgb }.rgb);
+}
+
+console.log(hexSomeColors);
+console.log(rgbSomeColors);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 15
+
+const forecast = {
+    today: {
+        low: 28,
+        high: 32,
+        icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+    },
+    tomorrow: {
+        low: 27,
+        high: 31,
+    },
+};
+
+const {
+    today: {
+        low: lowToday,
+        high: highToday,
+        icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+    },
+    tomorrow: {
+        low: lowTomorrow,
+        high: highTomorrow,
+        icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+    },
+} = forecast;
+
+console.log(forecast);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 16
+
+function calculateMeanTemperature(forecast) {
+    const {
+        today: { low: todayLow, high: todayHigh },
+        tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+    } = forecast;
+
+    return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+}
+
+const forecastTo = {
+    today: { low: 15, high: 19 },
+    tomorrow: { low: 10, high: 16 },
+};
+
+console.log(calculateMeanTemperature(forecastTo));
+
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 16
+
+const scores = [89, 64, 42, 17, 93, 51, 26];
+
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// console.log(bestScore);
+// console.log(worstScore);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 17
+
+const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
+
+const allScores = [
+    ...firstGroupScores,
+    ...secondGroupScores,
+    ...thirdGroupScores,
+];
+const bestScore = Math.max(...allScores);
+const worstScore = Math.min(...allScores);
+
+console.log(bestScore);
+console.log(worstScore);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 18
+
+const defaultSettings = {
+    theme: 'light',
+    public: true,
+    withPassword: false,
+    minNumberOfQuestions: 10,
+    timePerQuestion: 60,
+};
+const overrideSettings = {
+    public: false,
+    withPassword: true,
+    timePerQuestion: 30,
+};
+
+const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+console.log(finalSettings);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 18
+
+// function makeTask({ category: 'Finance', newText: 'Take interest' }) {
+//     const completed = false;
+//     const category = 'General';
+//     const priority = 'Normal';
+
+//     data = {
+//         completed: false,
+//         category: 'General',
+//         priority: 'Normal',
+//         text,
+//     };
+
+//     const {
+//         completed: newCompleted,
+//         category: newCategory,
+//         priority: newPriority,
+//         text: newText,
+//     } = data;
+
+//     return data;
+// }
+
+// console.log(data);
+
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+const book = {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+};
+
+// Додамо зображення обкладинки, якщо воно відсутнє в об'єкті книги
+const {
+    title = 'ggg',
+    coverImage = 'https://via.placeholder.com/640/480',
+    author,
+} = book;
+
+console.log(title); // The Last Kingdom
+console.log(author); // Bernard Cornwell
+console.log(coverImage); // https://via.placeholder.com/640/480

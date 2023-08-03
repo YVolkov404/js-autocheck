@@ -66,7 +66,7 @@ console.log(checkValue(numbers, 13));
 
 const nums = [23, 34, 12, 67, 33];
 
-function checkValue(numberArray, minValue) {
+function checkValues(numberArray, minValue) {
     for (const number of numberArray) {
         if (minValue > number) {
             return false;
@@ -75,8 +75,8 @@ function checkValue(numberArray, minValue) {
     return true;
 }
 
-console.log(checkValue(numbers, 10));
-console.log(checkValue(numbers, 13));
+console.log(checkValues(nums, 10));
+console.log(checkValues(nums, 13));
 
 // example 7
 
