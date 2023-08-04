@@ -95,11 +95,11 @@ console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 function countTotalSalary(salaries) {
     let totalSalary = 0;
-    // Change code below this line
+
     for (const value of Object.values(salaries)) {
         totalSalary += value;
     }
-    // Change code above this line
+
     return totalSalary;
 }
 
@@ -376,29 +376,205 @@ function makeTask(data) {
     const {
         category: newCategory = 'General',
         priority: newPriority = 'Normal',
-        text: newText,
+        text,
     } = data;
 
     data = {
         category,
         priority,
-        text: newText,
         completed,
+        text,
         newProps(changeCategory, changePriority) {
             this.category = changeCategory;
             this.priority = changePriority;
         },
         addText(addText) {
-            this.newText = addText;
+            if (this.text === undefined) {
+                delete this.text;
+            }
+            this.text = addText;
         },
     };
 
     data.newProps(newCategory, newPriority);
-    data.addText(newText);
+    data.addText(text);
 
     return data;
 }
 
-console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
+// 2 var
 
+// function makeTask(data) {
+//     const completed = false;
+//     const category = 'General';
+//     const priority = 'Normal';
+
+//     const newData = {
+//         completed,
+//         category,
+//         priority,
+//         ...data,
+//     };
+//     return newData;
+// }
+
+console.log(makeTask({}));
+console.log(
+    makeTask({
+        category: 'Homemade',
+        priority: 'Low',
+        text: 'Take out the trash',
+    }),
+);
+console.log(makeTask({ category: 'Finance', text: 'Take interest' }));
+console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
+console.log(makeTask({ text: 'Buy bread' }));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 19
+
+function add(...args) {
+    let total = 0;
+
+    for (const arg of args) {
+        total += arg;
+    }
+
+    return total;
+}
+
+console.log(add(23, 45, 67, 31, 84));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 20
+
+function addOverNum(firstNumber, ...args) {
+    let total = 0;
+
+    for (const arg of args) {
+        if (arg > firstNumber) {
+            total += arg;
+        }
+    }
+
+    return total;
+}
+
+console.log(addOverNum(55, 45, 67, 31, 84));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 21
+
+function findMatches(numbers, ...args) {
+    const matches = [];
+    for (const arg of args) {
+        if (numbers.includes(arg)) {
+            matches.push(arg);
+        }
+    }
+    return matches;
+}
+
+console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
+console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 22
+
+const bookShelf = {
+    books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+    updateBook(oldName, newName) {
+        this.books.splice(this.books.indexOf(oldName), 1, newName);
+    },
+};
+
+bookShelf.updateBook('The last kingdom', 'Dune');
+bookShelf.updateBook('Haze', 'Dungeon chronicles');
+
+console.log(bookShelf);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 23
+
+const atTheOldToad = {
+    potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+    getPotions() {
+        return this.potions;
+    },
+    addPotion(potionName) {
+        return this.potions.push(potionName);
+    },
+    removePotion(potionName) {
+        return this.potions.splice(this.potions.indexOf(potionName), 1);
+    },
+    updatePotionName(oldName, newName) {
+        return this.potions.splice(this.potions.indexOf(oldName), 1, newName);
+    },
+};
+
+atTheOldToad.addPotion('Invisibility');
+atTheOldToad.addPotion('Power potion');
+atTheOldToad.removePotion('Dragon breath');
+atTheOldToad.removePotion('Speed potion');
+atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+atTheOldToad.updatePotionName('Stone skin', 'Poison');
+
+console.log(atTheOldToad);
+console.log('++++++++++++++++++++++++++++++++++++++++++++++');
+
+// example 23
+
+const atTheOldsToad = {
+    potions: [
+        { name: 'Speed potion', price: 460 },
+        { name: 'Dragon breath', price: 780 },
+        { name: 'Stone skin', price: 520 },
+    ],
+    getPotions() {
+        return this.potions;
+    },
+    addPotion(newPotion) {
+        if (this.potions.includes(newPotion)) {
+            return `Error! Potion ${newPotion} is already in your inventory!`;
+        }
+
+        this.potions.push(newPotion);
+    },
+    removePotion(potionName) {
+        const potionIndex = this.potions.indexOf(potionName);
+
+        if (potionIndex === -1) {
+            return `Potion ${potionName} is not in inventory!`;
+        }
+
+        this.potions.splice(potionIndex, 1);
+    },
+    updatePotionName(oldName, newName) {
+        const potionIndex = this.potions.indexOf(oldName);
+
+        if (potionIndex === -1) {
+            return `Potion ${oldName} is not in inventory!`;
+        }
+
+        this.potions.splice(potionIndex, 1, newName);
+    },
+};
+
+atTheOldToad.getPotions();
+
+atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
+atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
+atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+atTheOldToad.addPotion({ name: 'Stone skin', price: 240 });
+atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+atTheOldToad.addPotion({ name: 'Stone skin', price: 240 });
+
+atTheOldToad.removePotion('Dragon breath');
+atTheOldToad.removePotion('Speed potion');
+
+atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion');
+
+console.log(atTheOldsToad);
 console.log('++++++++++++++++++++++++++++++++++++++++++++++');
