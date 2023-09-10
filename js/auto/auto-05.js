@@ -638,3 +638,4 @@ mangos.blacklist('poly@mail.com');
 console.log(mangos.blacklistedEmails); // ["poly@mail.com"]
 console.log(mangos.isBlacklisted('mango@mail.com')); // false
 console.log(mangos.isBlacklisted('poly@mail.com')); // true
+
