@@ -170,13 +170,13 @@ console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 7
 
-function makeStringFromArray(array, delimiter) {
-    let string;
+// function makeStringFromArray(array, delimiter) {
+//     let string;
 
-    string = array.join(delimiter);
+//     string = array.join(delimiter);
 
-    return string;
-}
+//     return string;
+// }
 
 console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
@@ -392,15 +392,15 @@ console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
 // example 21
 
-function findNumber(start, end, divisor) {
-    let number;
+// function findNumber(start, end, divisor) {
+//     let number;
 
-    for (let i = start; i < end; i += 1) {
-        if (i % divisor === 0) {
-            return i;
-        }
-    }
-}
+//     for (let i = start; i < end; i += 1) {
+//         if (i % divisor === 0) {
+//             return i;
+//         }
+//     }
+// }
 
 console.log('++++++++++++++++++++++++++++++++++++++++++++++');
 
