@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.js-button {
+    width: 177px;
+    padding: 3px 0 3px 3px;
+    text-align: left;
+    color: yellow;
+    background-color: blue;
+    font-weight: bold;
+}
