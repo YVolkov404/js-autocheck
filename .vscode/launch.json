@@ -7,7 +7,7 @@
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:5500/index.html",
             "webRoot": "${workspaceFolder}",
-            "runtimeExecutable": "/opt/google/chrome/google-chrome",
+            "runtimeExecutable": "/opt/google/chrome/chrome",
             "userDataDir": true
         },
         {
