@@ -144,13 +144,66 @@
 
 //-------------------------
 
-let i = 0;
+// let i = 3;
 
-while (i < 6) {
-    if (i === 3) {
-        break;
-    }
-    i = i + 1;
-}
+// while (i < 6) {
+//     if (i === 5) {
+//         break;
+//     }
+//     i = i + 1;
+// }
 
-console.log(i);
+// console.log(i);
+
+//--------------------------
+
+// let password = '';
+
+// do {
+//     password = prompt('Введіть пароль довший 4-х символів', '');
+// } while (password.length < 5);
+
+// console.log('Ввели пароль: ', password);
+
+//--------------------------
+
+// const target = 3;
+// let sum = 0;
+
+// for (let i = 0; i <= target; i += 1) {
+//     sum += i;
+// }
+
+// console.log(sum);
+
+//---------------------------
+
+// const max = 10;
+// for (let i = 0; i < max; i += 1) {
+//     console.log(`${max} % ${i} = `, max % i);
+// }
+
+//---------------------------
+
+// for (let i = 0; i <= 5; i += 1) {
+//     console.log(i);
+
+//     if (i === 3) {
+//         console.log('Знайшли число 3, перериваємо виконання циклу');
+//         break;
+//     }
+// }
+
+// console.log('Лог після циклу');
+
+//---------------------------
+
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//     if (i % 2 === 0) {
+//         continue;
+//     }
+
+//     console.log('Непарне i: ', i); // 1, 3, 5, 7, 9
+// }
