@@ -1,10 +1,11 @@
 {
     "name": "js-autocheck",
     "version": "1.0.0",
-    "description": "JavaScript tasks | Example",
+    "description": "JavaScript tasks | Examples",
     "main": "index.js",
     "scripts": {
-        "test": "npx eslint js/auto/auto-02.js"
+        "start": "node js/class/class-01.js",
+        "test": "npx eslint js/class/class-01.js"
     },
     "keywords": [],
     "author": "YVolkov404 <sir.volkov@outlook.com>",

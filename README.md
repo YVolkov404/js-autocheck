@@ -1,2 +1,3 @@
 # js-autocheck
-JavaScript tasks | Example
+
+## JavaScript tasks | Examples
