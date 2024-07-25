@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node js/class/class-01.js",
-        "test": "npx eslint js/class/class-01.js"
+        "test": "eslint js/class/class-01.js"
     },
     "keywords": [],
     "author": "YVolkov404 <sir.volkov@outlook.com>",

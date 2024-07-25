@@ -23,7 +23,6 @@
                 "url": "http://localhost:8080",
                 "webRoot": "${workspaceFolder}"
             },
-
             {
                 "command": "npm start",
                 "name": "Run npm start",
