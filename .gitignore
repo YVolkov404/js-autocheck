@@ -131,3 +131,4 @@ dist
 
 # vscode user
 .vscode/launch.json
+js-autocheck.code-workspace
