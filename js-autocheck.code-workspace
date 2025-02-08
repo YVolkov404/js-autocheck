@@ -6,12 +6,8 @@
 	],
 	"settings": {
 		"liveServer.settings.port": 8080,
-        "liveServer.settings.CustomBrowser": "chrome",
+        "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
         "liveServer.settings.ChromeDebuggingAttachment": true,
-        "cSpell.words": [
-            "autocheck",
-            "Volkov"
-        ],
 	},
 	"launch": {
 		"version": "0.2.0",
