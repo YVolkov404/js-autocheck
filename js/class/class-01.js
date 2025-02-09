@@ -1,6 +1,6 @@
 //--------------------------
 console.log('Hello World!')
 //--------------------------
-const myName = "Polly"
+const myName = "John Doe"
 console.log(myName)
 //--------------------------
