@@ -8,6 +8,7 @@
 		"liveServer.settings.port": 8080,
         "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
         "liveServer.settings.ChromeDebuggingAttachment": true,
+        "git.enableCommitSigning": true,
 	},
 	"launch": {
 		"version": "0.2.0",
